@@ -31,7 +31,7 @@ On personnalise le ficher /var/www/html/index.html en y plaçant le code suivant
 
     <body>
         <h1>TP 1 — Devops</h1>
-        <p>It wrks !</h1>
+        <p>It wrks !</p>
     </body>
 </html>
 ```
