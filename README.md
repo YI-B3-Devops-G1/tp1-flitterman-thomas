@@ -22,4 +22,10 @@ sudo apt install openssh-server nodejs nginx
 
 ## Vagrant
 
-Après avoir installé Vagrant, on lance la commande `vagrant up`. La configuration spécifiée dans le fichier `Vagrant` sera appliquée.
+Après avoir installé Vagrant, on lance la commande `vagrant up`. La configuration spécifiée dans le fichier `Vagrant` sera appliquée et le fichier `bootstrap.sh` sera aussi exécuté. Ce dernier installe tous les paquets nécessaires : openssh-server, NodeJS (version 12) et surtout Nginx.
+
+Dans `Vagrant`, on rajoute des règles de redirection des ports :
+
+- Lorsque l'utilisateur souhaite accéder au port 8080 dans son navigateur, il sera redirigé vers le port 80 qui correspond à HTTP.
+- Le port 8081 redirigera à 443, qui correspond à HTTPS.
+- Et le port 8082 redirigera au port 22 qui correspond à SSH.
